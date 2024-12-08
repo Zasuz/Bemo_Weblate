@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="estate_widget_tree" model="ir.ui.view">
+            <field name="name">estate_widget_tree</field>
+            <field name="model">estate.widget</field>
+            <field name="arch" type="xml">
+                <tree js_class="inherit_button_notify">
+                        <field name="name"/>
+                        <field name="color" widget="color_picker_widget"/>
+                        <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="estate_widget_form" model="ir.ui.view">
+            <field name="name">estate_widget_form</field>
+            <field name="model">estate.widget</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="color" widget="color_picker_widget" />
+                            <field name="date" widget="date_widget"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_color_widget" model="ir.actions.act_window">
+            <field name="name">Color Widget</field>
+            <field name="res_model">estate.widget</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

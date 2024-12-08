@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record id="estate_mail_server" model="ir.mail_server">
+            <field name="name">Estate Mail Server</field>
+            <field name="smtp_host">smtp.gmail.com</field>
+            <field name="smtp_port">465</field>
+            <field name="smtp_user">trangialam91b@gmail.com</field>
+            <field name="smtp_pass">zxkh ghbx bdlu ukee</field>
+            <field name="smtp_encryption">ssl</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

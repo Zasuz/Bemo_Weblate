@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="website.header_language_selector" model="ir.ui.view">
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

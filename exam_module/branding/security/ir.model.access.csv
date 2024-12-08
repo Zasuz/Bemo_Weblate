@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+branding.access_website_user_feedback_public,User Public,branding.model_website_user_feedback,base.group_public,1,1,1,1
+branding.access_website_user_feedback_admin,User Admin,branding.model_website_user_feedback,base.group_user,1,1,1,1

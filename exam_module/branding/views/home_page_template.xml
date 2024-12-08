@@ -1,0 +1,109 @@
+<odoo>
+    <template id="home_page_template" name="Bemo Bap">
+        <t t-call="website.layout">
+            <div class="oe_structure"/>
+            <section id="intro-section" class="section-container">
+                <div class="intro-content">
+                    <h1 class="intro-title">
+                        One platform for your team to get work done faster
+                    </h1>
+                    <p class="intro-text">
+                        Comprehensive features make Bemo® the premier option to boost efficiency and productivity in
+                        your workflow
+                    </p>
+                    <button class="intro-button">Go to system</button>
+                </div>
+                <img src="branding/static/src/img/bap-intro-section.png" class="intro-image"/>
+            </section>
+            <div class="oe_structure"/>
+            <section class="section-container" id="newfeed-section">
+                <div class="header">
+                    <img src="branding/static/src/img/polygon-bg.png" alt="Polygon Background" class="header-img"/>
+                    <h1 class="header-title">TIN TỨC NỘI BỘ MỚI NHẤT</h1>
+                </div>
+                <div class="newfeed-content">
+                    <t t-foreach="range(0,3)" t-as="i">
+                        <div class="newfeed-item">
+                            <img src="branding/static/src/img/newfeed-1.png" alt="Newfeed Image" class="newfeed-item-img"/>
+
+                            <p class="newfeed-date"><i class="fa fa-calendar" aria-hidden="true"></i>27-06-2022
+                            </p>
+                            <h3 class="newfeed-item-title">[BAP X DUT] BLOCKCHAIN SEMINAR</h3>
+                            <p class="newfeed-item-description">
+                                On June 27th, BAP Software and DUT University will co-host a seminar on the topic of
+                                Blockchain
+                                technology. The seminar will be held at DUT University, starting at 8:00 AM. The seminar
+                                will be a
+                                great opportunity for students to learn about the latest trends in Blockchain technology and
+                                how it
+                                can be applied in real-world scenarios. The seminar will feature presentations from industry
+                                experts, as well as hands-on workshops and networking opportunities. We hope to see you
+                                there!
+                            </p>
+                        </div>
+                    </t>
+                </div>
+            </section>
+            <div class="oe_structure"/>
+            <section id="intention-section">
+                <div class="section-container intention-container">
+                    <img id="intention-1" class="intention-image-icon" src="branding/static/src/img/intention-1.png"></img>
+                    <img id="intention-2" class="intention-image-icon" src="branding/static/src/img/intention-2.png"></img>
+                    <img id="intention-3" class="intention-image-icon" src="branding/static/src/img/intention-3.png"></img>
+                    <img id="intention-4" class="intention-image-icon" src="branding/static/src/img/intention-4.png"></img>
+                    <img
+
+                            src="branding/static/src/img/bemo_company_intention.png"
+                            alt="Company Intention Image"
+                            class="intention-image"
+                    />
+                    <div class="intention-content">
+                        <div class="header">
+                            <img
+                                    src="branding/static/src/img/polygon-bg.png"
+                                    alt="Polygon Background"
+                                    class="header-img"
+                            />
+                            <h1 class="header-title">Company Intention</h1>
+                        </div>
+                        <div class="intention-text">
+                            <t t-foreach="range(0, 6)" t-as="i">
+                                <p>
+                                    BAP Software is a leading provider of software solutions for businesses of all
+                                    sizes. Our mission is to help companies achieve their goals by providing them with
+                                </p>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="oe_structure"/>
+            <section id="gallery-section">
+                <div class="section-container" style="display: block;">
+                    <div class="header">
+                        <img
+                                src="branding/static/src/img/polygon-bg.png"
+                                alt="Polygon Background"
+                                class="header-img"
+                        />
+                        <h1 class="header-title">Company Gallery</h1>
+                    </div>
+                    <div class="gallery">
+                        <video controls="true" src="https://bap-software.net/wp-content/uploads/2021/06/video-nen.mp4"></video>
+                        <t t-foreach="range(0, 6)" t-as="i">
+                            <img class="gallery-img" src="branding/static/src/img/bap-gottalent.png"/>
+                        </t>
+                    </div>
+                </div>
+            </section>
+            <div class="oe_structure"/>
+
+
+        </t>
+    </template>
+    <template id="logo_navbar" inherit_id="website.option_header_brand_logo">
+            <xpath expr="//span" position="replace">
+                <img src="branding/static/src/img/logo-bap.png"></img>
+            </xpath>
+    </template>
+</odoo>

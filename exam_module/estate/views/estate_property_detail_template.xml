@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+        <template id="estate_property_detail_template" name="Estate Property Detail">
+            <t t-call="website.layout">
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <div class="card-header bg-primary text-white">
+                                    <h1 class="card-title text-center">
+                                        <t t-esc="estate.name"/>
+                                    </h1>
+                                </div>
+                                <div class="card-body d-flex">
+                                    <div class="col-6">
+                                        <p>
+                                            <strong>Description:</strong>
+                                            <t t-esc="estate.description"/>
+                                        </p>
+                                        <p>
+                                            <strong>Postcode:</strong>
+                                            <t t-esc="estate.postcode"/>
+                                        </p>
+                                        <p>
+                                            <strong>Available From:</strong>
+                                            <t t-esc="estate.availability_date"/>
+                                        </p>
+                                        <p>
+                                            <strong>Expected Price:</strong>
+                                            $<t t-esc="estate.expected_price"/>
+                                        </p>
+                                        <p>
+                                            <strong>Selling Price:</strong>
+                                            <t t-esc="estate.selling_price or 'N/A'"/>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>
+                                            <strong>Bedrooms:</strong>
+                                            <t t-esc="estate.bedrooms"/>
+                                        </p>
+                                        <p>
+                                            <strong>Living Area:</strong>
+                                            <t t-esc="estate.living_area"/>
+                                            m²
+                                        </p>
+                                        <p>
+                                            <strong>Garden:</strong>
+                                            <t t-esc="'Yes' if estate.has_garden else 'No'"/>
+                                        </p>
+                                        <p>
+                                            <strong>Total Area:</strong>
+                                            <t t-esc="estate.total_area"/>
+                                            m²
+                                        </p>
+                                        <p>
+                                            <strong>Stage:</strong>
+                                            <t t-esc="estate.stage"/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" d-flex justify-content-end">
+                                    <button class="btn btn-primary" type="button">
+                                        Place an Appointment
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+    <record id="buyer_offers_report_form" model="ir.ui.view">
+        <field name="name">buyer.offer.export.form</field>
+        <field name="model">buyer.offer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Excel Report">
+                    <group>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="buyer_id"/>
+                    </group>
+                <footer>
+                    <button name="action_buyer_offer_export" string="Export" type="object" />
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_buyer_offers_report" model="ir.actions.act_window">
+        <field name="name">Buyer Offers</field>
+        <field name="res_model">buyer.offer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="buyer_offers_report_form" />
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record id="estate_send_mail_inherit_estate_property_form" model="ir.ui.view">
+            <field name="name">estate_send_mail_inherit_estate_property_form</field>
+            <field name="model">estate.property</field>
+            <field name="inherit_id" ref="estate.estate_property_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='buyer_id']" position="after">
+                    <field name="buyer_email" attrs="{'required': [('buyer_id', '!=', False)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='seller_id']" position="after">
+                    <field name="user_sold"/>
+                </xpath>
+
+                <xpath expr="//header" position="inside">
+                    <button name="action_send_email" string="Send Email" type="object" class="oe_highlight" attrs="{'invisible' : [('stage','!=','sold')]}" confirm="Are you sure to send email ?"/>
+                </xpath>
+
+                <xpath expr="//field[@name='offer_ids']//tree" position="inside">
+                    <field name="user_accepted"/>
+                    <field name="user_refused"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

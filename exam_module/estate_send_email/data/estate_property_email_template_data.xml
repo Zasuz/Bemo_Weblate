@@ -1,0 +1,114 @@
+<odoo>
+    <data>
+        <record id="estate_property_confirm_sold_email_template" model="mail.template">
+            <field name="name">Estate Property Email Template</field>
+            <field name="model_id" ref="estate.model_estate_property"/>
+            <field name="email_to">${object.buyer_email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="subject">Property ${object.name} Sold</field>
+            <field name="body_html" type="html">
+                <div style="color:black">
+                    <div style="background-color: #6eb2fa;text-align: end;">
+                        <img src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNlJ0RVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f415299a2100f16a50a01627dacf875ae9d65094/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--15c3f2f3e11927673ae52b71712c1f66a7a1b7bd/Logo%20BAP_W.png"
+                             alt=""/>
+                    </div>
+                    <div style="border:1px solid black">
+                        <div style="padding: 20px;">
+                            <p style="font-weight: bold;">Dear ${object.buyer_id.name},</p>
+                            <p>The property ${object.name} you purchased has been successfully sold by
+                                ${object.user_sold.name}.
+                            </p>
+                            <p>You can contact via email : ${object.user_sold.email},</p>
+                        </div>
+                        <div style="width: 100%; height: 2px; background-color: gray;">
+
+                        </div>
+                        <div style="padding: 20px;">
+                            <p style="font-weight: bold;">Property Information</p>
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Code</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.code}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Name</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.name}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Type</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.property_type_id.name}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Price</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.selling_price}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Description</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.description}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p>Best regard,</p>
+                </div>
+
+            </field>
+        </record>
+
+
+        <record id="estate_property_offer_accepted_email_template" model="mail.template">
+            <field name="name">Estate Property Email Template</field>
+            <field name="model_id" ref="estate.model_estate_property_offer"/>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="subject">Property ${object.property_id.name} Accepted</field>
+            <field name="body_html" type="html">
+                <div style="color:black">
+                    <div style="background-color: #6eb2fa;text-align: end;">
+                        <img src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNlJ0RVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f415299a2100f16a50a01627dacf875ae9d65094/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJc0FXa0NMQUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--15c3f2f3e11927673ae52b71712c1f66a7a1b7bd/Logo%20BAP_W.png"
+                             alt=""/>
+                    </div>
+                    <div style="border:1px solid black">
+                        <div style="padding: 20px;">
+                            <p style="font-weight: bold;">Dear ${object.partner_id.name},</p>
+                            <p>The property ${object.property_id.name} you buy is Accepted by
+                                ${object.user_accepted.name}.
+                            </p>
+                        </div>
+                        <div style="width: 100%; height: 2px; background-color: gray;">
+
+                        </div>
+                        <div style="padding: 20px;">
+                            <p style="font-weight: bold;">Property Information</p>
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Code</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.property_id.code}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Name</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.property_id.name}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Type</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.property_id.property_type_id.name}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Price</td>
+                                    <td style="border: 1px solid black; padding: 8px;">${object.price}</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 8px;">Property Description</td>
+                                    <td style="border: 1px solid black; padding: 8px;">
+                                        ${object.property_id.description}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

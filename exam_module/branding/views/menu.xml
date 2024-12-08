@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="menu_website_user_feedback" name="Feedback" parent="" action="action_website_user_feedback"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<odoo>
+    <template id="assets_backend" name="Color Picker Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/estate/static/src/js/color_widget.js"></script>
+            <script type="text/javascript" src="/estate/static/src/js/date_widget.js"></script>
+            <script type="text/javascript" src="/estate/static/src/js/button_notify_widget.js"></script>
+            <script type="text/javascript" src="/estate/static/src/js/checkbox_widget.js"></script>
+
+            <link href="/estate/static/src/css/color_widget.scss" rel="stylesheet" type="text/scss" />
+        </xpath>
+    </template>
+
+    <template id="assets_frontend"  inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link href="/estate/static/src/css/estate_property_template.scss" rel="stylesheet" type="text/scss" />
+        </xpath>
+    </template>
+
+
+</odoo>

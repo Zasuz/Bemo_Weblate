@@ -1,0 +1,113 @@
+<odoo>
+    <data>
+        <template id="estate.estate_property_template" name="Estate Property Card">
+
+            <t t-call="website.layout">
+                <t t-set="prev_page" t-value="page - 1"/>
+                <t t-set="next_page" t-value="page + 1"/>
+                <div class="container mt-4">
+                    <div class="oe_structure oe_empty"/>
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="/shop/estate" method="get" class="d-flex mb-4">
+                                <input type="text" name="search" class="form-control me-2" placeholder="Search for estate" t-att-value="search"/>
+                                <button type="submit" class="btn btn-primary ml-2">Search</button>
+                            </form>
+                            <div class="row d-flex align-items-stretch">
+                                <t t-foreach="estates" t-as="property">
+                                    <div class="col-md-3 mb-4">
+                                        <a t-att-href="'/shop/estate/'+str(property.id)" style="text-decoration: none;">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-header bg-primary text-white">
+                                                <h4 class="card-title">
+                                                    <t t-esc="property.name"/>
+                                                </h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>
+                                                    <strong>Description:</strong>
+                                                    <t t-esc="property.description"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Postcode:</strong>
+                                                    <t t-esc="property.postcode"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Available From:</strong>
+                                                    <t t-esc="property.availability_date"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Expected Price:</strong>
+                                                    $
+                                                    <t t-esc="property.expected_price"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Selling Price:</strong>
+                                                    <t t-esc="property.selling_price or 'N/A'"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Bedrooms:</strong>
+                                                    <t t-esc="property.bedrooms"/>
+                                                </p>
+                                                <p>
+                                                    <strong>Living Area:</strong>
+                                                    <t t-esc="property.living_area"/>
+                                                    m²
+                                                </p>
+                                                <p>
+                                                    <strong>Garden:</strong>
+                                                    <t t-esc="'Yes' if property.has_garden else 'No'"/>
+                                                    <t t-if="property.has_garden">(Area:
+                                                        <t t-esc="property.garden_area"/>
+                                                        m², Orientation:<t t-esc="property.garden_orientation"/>)
+                                                    </t>
+                                                </p>
+                                                <p>
+                                                    <strong>Total Area:</strong>
+                                                    <t t-esc="property.total_area"/>
+                                                    m²
+                                                </p>
+                                                <p>
+                                                    <strong>Stage:</strong>
+                                                    <t t-esc="property.stage"/>
+                                                </p>
+                                            </div>
+
+                                            <!-- Card Footer -->
+                                            <div class="card-footer text-end">
+                                                <span class="badge bg-success">
+                                                    Best Price: $
+                                                    <t t-esc="property.best_price"/>
+                                                </span>
+                                                <span class="badge bg-secondary">
+                                                    Code:
+                                                    <t t-esc="property.code or 'N/A'"/>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pagination" style="justify-content:center">
+                        <t t-if="prev_page >0">
+                            <li class="page-item"><a class="page-link" t-att-href="'/shop/estate?page='+str(prev_page)+'&amp;search='+search">Previous</a></li>
+                        </t>
+                        <t t-foreach="page_range" t-as="page">
+                            <li class="page-item"><a class="page-link" t-att-href="'/shop/estate?page='+str(page)+'&amp;search='+search"><t t-esc="page"></t></a></li>
+                        </t>
+
+                        <t t-if="next_page &lt;= total_pages">
+                            <li class="page-item"><a class="page-link" t-att-href="'/shop/estate?page='+str(next_page)+'&amp;search='+search">Next</a></li>
+                        </t>
+                    </ul>
+                </div>
+                <div class="oe_structure oe_empty"/>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

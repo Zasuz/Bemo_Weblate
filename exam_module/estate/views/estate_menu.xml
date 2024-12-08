@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <menuitem id="estate_property_menu_root" name="Estate"/>
+        <menuitem id="estate_property_menu" name="Estate" parent="estate_property_menu_root" sequence="5"/>
+        <menuitem id="estate_property_action" name="Real Estate Property" parent="estate_property_menu" action="action_estate_property"/>
+
+        <menuitem id="estate_property_menu_adv" name = "Advertisement" parent="estate_property_menu_root" sequence="10"/>
+        <menuitem id="estate_property_offer_menu" name="Offers" parent="estate_property_menu_adv" action="action_estate_property_offer"/>
+
+        <menuitem id="estate_property_menu_configuration" name="Configuration" parent="estate_property_menu_root" sequence="20"/>
+        <menuitem id="estate_property_tag_menu" name="Property Tags" parent="estate_property_menu_configuration" action="action_estate_property_tag"/>
+        <menuitem id="estate_property_type_menu" name="Property Types" parent="estate_property_menu_configuration" action="action_estate_property_type"/>
+
+        <menuitem id="estate_property_report_menu" name="Reporting"  parent="estate_property_menu_root" />
+        <menuitem id="estate_property_buyer_report" name="Buyer Offer Report" parent="estate_property_report_menu" action="action_estate_property_buyer_offer_report"/>
+        <menuitem id="estate_property_buyer_report_wizard" name="Buyer Offer Export XLXS" parent="estate_property_report_menu" action="action_buyer_offers_report"/>
+
+        <menuitem id="menu_color_widget" name="Color Widget" action="action_color_widget"/>
+
+    </data>
+</odoo>

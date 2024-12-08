@@ -1,0 +1,72 @@
+<odoo>
+
+        <template id="custom_feedback_snippets"  name="Custom Snippets">
+            <section class="feedback">
+                <div id="feedback-section" class="section-container">
+<!--                    <t t-call="branding.template_base"/>-->
+                    <img src="/branding/static/src/img/bap-intro-section.png" alt="BAP Intro Section" class="feedback-image" />
+                    <div class="feedback-content">
+                        <div class="header">
+                            <img src="/branding/static/src/img/polygon-bg.png" alt="Polygon Background" class="header-img" />
+                            <h1 class="header-title">Feedback</h1>
+                        </div>
+                        <div class="feedback-form-container">
+                            <form action="/feedback" method="post" class="feedback-form">
+                                <textarea id="description" name="description" rows="10" placeholder="Nhập phản hồi của bạn tại đây..."></textarea>
+                                <button type="submit" class="feedback-submit-button">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+<!--        <template id="template_base">-->
+<!--            <div class="template-base-content">-->
+<!--                <h2>Base Template</h2>-->
+<!--            </div>-->
+<!--        </template>-->
+
+
+<!--        <template id="template_1" inherit_id="template_base" data-reload="/" active="True">-->
+<!--            <xpath expr="//div[@class='template-base-content']" position="inside">-->
+<!--                <h1>Template 1 Content</h1>-->
+<!--            </xpath>-->
+<!--        </template>-->
+
+<!--        <template id="template_2" inherit_id="template_base" data-reload="/" active="True">-->
+<!--            <xpath expr="//div[@class='template-base-content']" position="inside">-->
+<!--                <h1>Template 2 Content</h1>-->
+<!--            </xpath>-->
+<!--        </template>-->
+
+<!--        <template id="template_3" inherit_id="template_base" data-reload="/" active="True">-->
+<!--            <xpath expr="//div[@class='template-base-content']" position="inside">-->
+<!--                <h1>Template 3 Content</h1>-->
+<!--            </xpath>-->
+<!--        </template>-->
+<!--        <template id="custom_snippet_options" inherit_id="website.snippet_options">-->
+<!--            <xpath expr="." position="inside">-->
+<!--                <div data-selector="section.feedback">-->
+<!--                    <we-select string="Width">-->
+<!--                        <we-button data-customize-website-views=""           > 25%  </we-button>-->
+<!--                        <we-button data-customize-website-views="branding.template_1" > 50%  </we-button>-->
+<!--                        <we-button data-customize-website-views="branding.template_2" > 75%  </we-button>-->
+<!--                        <we-button data-customize-website-views="branding.template_3" > 100% </we-button>-->
+<!--                    </we-select>-->
+<!--                    <we-select string="Custom Options">-->
+<!--                        <we-button data-select-class="new">new</we-button>-->
+<!--                        <we-button data-select-class="d-none">None</we-button>-->
+<!--                        <we-button data-select-class="custom">custom</we-button>-->
+<!--                    </we-select>-->
+<!--                </div>-->
+<!--            </xpath>-->
+<!--        </template>-->
+
+        <template id="custom_snippets_web_snippets" inherit_id="website.snippets" name="Custom Snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="inside">
+                <div class="o_panel_body">
+                    <t t-snippet="branding.custom_feedback_snippets" t-thumbnail="/branding/static/src/img/bap.jpg"/>
+                </div>
+            </xpath>
+        </template>
+</odoo>
