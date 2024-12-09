@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 02:25+0000\n"
-"PO-Revision-Date: 2024-12-09 02:30+0000\n"
+"PO-Revision-Date: 2024-12-09 03:38+0000\n"
 "Last-Translator: Trần Gia Lâm <trangialam91b@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/odoo_training/"
 "estate/vi/>\n"
@@ -196,12 +196,12 @@ msgstr ""
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__best_price
 msgid "Best Price"
-msgstr ""
+msgstr "Giá tốt nhất"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_template
 msgid "Best Price: $"
-msgstr ""
+msgstr "Giá tốt nhất: $"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_search
@@ -433,7 +433,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:estate.field_estate_property__expected_price
 #: model:ir.model.fields,field_description:estate.field_estate_property_type__expected_price
 msgid "Expected Price"
-msgstr ""
+msgstr "Giá mong đợi"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.buyer_offers_report_form
@@ -580,7 +580,7 @@ msgstr ""
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property_buyer__max_offer_price
 msgid "Max Offer Price"
-msgstr ""
+msgstr "Giá đề nghị cao nhất"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__message_has_error
@@ -595,7 +595,7 @@ msgstr ""
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property_buyer__min_offer_price
 msgid "Min Offer Price"
-msgstr ""
+msgstr "Giá đề nghị thấp nhất"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__my_activity_date_deadline
@@ -748,12 +748,12 @@ msgstr ""
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property_offer__price
 msgid "Price"
-msgstr ""
+msgstr "Giá"
 
 #. module: estate
 #: model:ir.model.constraint,message:estate.constraint_estate_property_offer_check_price_positive
 msgid "Price must be positive"
-msgstr ""
+msgstr "Giá không được âm"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_res_users__property_ids
