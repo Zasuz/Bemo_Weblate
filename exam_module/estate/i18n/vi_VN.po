@@ -7,13 +7,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 02:25+0000\n"
-"PO-Revision-Date: 2024-12-09 02:25+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-12-09 02:30+0000\n"
+"Last-Translator: Trần Gia Lâm <trangialam91b@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/odoo_training/"
+"estate/vi/>\n"
+"Language: vi_VN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_template
@@ -76,7 +79,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_detail_template
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_template
 msgid "<strong>Garden:</strong>"
-msgstr ""
+msgstr "Vườn"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_detail_template
@@ -94,7 +97,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_detail_template
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_template
 msgid "<strong>Selling Price:</strong>"
-msgstr ""
+msgstr "Giá bán"
 
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_detail_template
@@ -118,27 +121,27 @@ msgstr ""
 #. module: estate
 #: model_terms:ir.ui.view,arch_db:estate.estate_property_form
 msgid "Accept"
-msgstr ""
+msgstr "Xác nhận"
 
 #. module: estate
 #: model:ir.model.fields.selection,name:estate.selection__estate_property_offer__status__accepted
 msgid "Accepted"
-msgstr ""
+msgstr "Xác nhận"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Cần hành động"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__is_active
 msgid "Active"
-msgstr ""
+msgstr "Kích hoạt"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Hoạt động"
 
 #. module: estate
 #: model:ir.model.fields,field_description:estate.field_estate_property__activity_exception_decoration
